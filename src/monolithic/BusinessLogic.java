@@ -6,7 +6,7 @@ import calcs.calprocessing;
 public class BusinessLogic {
 	public double solve(String input) {
 		char[] tokens = input.toCharArray();
-     	
+		
 		// Stack for numbers
         Stack<Double> values = new Stack<Double>();
 
@@ -42,12 +42,12 @@ public class BusinessLogic {
             }
 	    }
 
-	         // Entire expression has been parsed at this point, apply remaining ops to remaining values
-	         while (!ops.empty())
-	             values.push(applyOp(ops.pop(), values.pop(), values.pop()));
-
-	         // Top of 'values' contains result, return it
-	         return values.pop();
+	    // Entire expression has been parsed at this point, apply remaining ops to remaining values
+	    while (!ops.empty())
+	    	values.push(applyOp(ops.pop(), values.pop(), values.pop()));
+	
+	    // Top of 'values' contains result, return it
+	    return values.pop();
 	}
 	  
 	public static boolean hasPrecedence(char op1, char op2) {
