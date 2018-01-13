@@ -14,8 +14,10 @@ public class UserInterface {
 	        
 	        String inp = sc.nextLine();
 
-	        if (inp.equals("bye"))
+	        if (inp.equals("bye")) {
+	        	System.out.println("Thanks for using calculator!\nBye!");
 	        	break;
+	        }
             
 	        BusinessLogic c = new BusinessLogic();
 	        
