@@ -1,4 +1,4 @@
-package calculatorLogic;
+package clientServer;
 
 import java.util.Stack;
 
